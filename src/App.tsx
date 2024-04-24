@@ -3,19 +3,26 @@ import  Footer  from './components/Footer';
 import React from 'react';
 
 import './App.css';
-import  styles  from './components/App.module.css';
+import  styles  from './App.module.css';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
 
 function App() {
   return (
    <div>
     <Header />
-    <main className={styles.main}>
-    <h1>conteudo</h1>
-    </main>
+    <div>
+      <main className={styles.main}>
+        <h2>O Que voce vai fazer?</h2>
+       <TaskForm />
+      </main>
+    </div>
+    <div>
+      <h2>Suas tarefas:</h2>
+      <TaskList />
+    </div>
     <Footer />
-
    </div>
-   
   );
 }
 
