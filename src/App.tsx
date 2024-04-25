@@ -14,13 +14,14 @@ function App() {
     <div>
       <main className={styles.main}>
         <h2>O Que voce vai fazer?</h2>
-       <TaskForm />
+       <TaskForm btnText='Criar tesk'/>
+       <div>
+      <h2>Suas tarefa:</h2>
+      <TaskList />
+      </div>
       </main>
     </div>
-    <div>
-      <h2>Suas tarefas:</h2>
-      <TaskList />
-    </div>
+  
     <Footer />
    </div>
   );
