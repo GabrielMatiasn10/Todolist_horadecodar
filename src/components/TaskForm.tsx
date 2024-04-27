@@ -28,11 +28,12 @@ interface Props {
                 dificulty: difficulty,
             };
 
-            setTaskList([...TaskList, newTask]);
+           
     
-            setTaskList([...TaskList, newTask]);
+            setTaskList!([...TaskList, newTask]);
             setTitle('');
             setDifficulty(0);
+            console.log(TaskList);
         };
     
         const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
