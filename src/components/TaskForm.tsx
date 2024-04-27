@@ -27,6 +27,8 @@ interface Props {
                 title: title,
                 dificulty: difficulty,
             };
+
+            setTaskList([...TaskList, newTask]);
     
             setTaskList([...TaskList, newTask]);
             setTitle('');
