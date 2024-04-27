@@ -1,11 +1,35 @@
-import React from 'react'
+import React from 'react';
+import { ITask } from '../interfaces/Task';
+import styles from './TaskList.module.css';
 
-type Props = {}
+type Props = {
+  TaskList: ITask[];
+};
 
-const TaskList = (props: Props) => {
+const TaskList = ({ TaskList }: Props) => {
   return (
-    <div>Lista de tarefa</div>
-  )
-}
+    <>
+      {TaskList.length > 0 ? (
+        <>
+          {TaskList.map(task => (
+            <div key={task.id} className={styles.task}>
+              <div>
+                <h4> {task.title}</h4>
+               <p> Dificudade{task.dificulty}</p>
+              </div>
+              <div>
+                <i className='bi bi-pencil'></i>
+                <i className='bi bi-trash'></i>
+              </div>
+            </div>
+          ))}
+          <p>tem tarefas cadastradas</p>
+        </>
+      ) : (
+        <p>não tem tarefas cadastradas</p>
+      )}
+    </>
+  );
+};
 
-export default TaskList
+export default TaskList;
