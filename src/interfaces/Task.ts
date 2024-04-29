@@ -1,6 +1,5 @@
 export interface ITask {
-    id : number;
-    title : string;
-    dificulty : number;
-   
-}
+    id: number;
+    title: string;
+    difficulty: number;
+  }

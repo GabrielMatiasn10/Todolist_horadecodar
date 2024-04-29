@@ -1,9 +1,13 @@
-.footer{
-    height: 100px;
-    padding: 50px;
+.footer {
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     background-color: #282c34;
-}
+    color: #fff;
+  }
+  
+  .footer span {
+    font-weight: bold;
+    color: #61dafb;
+  }
